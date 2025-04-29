@@ -902,8 +902,22 @@ class nnUNetTrainerDA5Segord0(nnUNetTrainerDA5):
         return tr_transforms
 
 
-class nnUNetTrainerDA5_10epochs(nnUNetTrainerDA5):
+class nnUNetTrainerDA5_100epochs(nnUNetTrainerDA5Segord0):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
-        self.num_epochs = 10
+        self.num_epochs = 100
+        
+
+class nnUNetTrainerDA5_150epochs(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 150
+
+        
+class nnUNetTrainerDA5_200epochs(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 200
