@@ -74,48 +74,63 @@ class nnUNetTrainer_200epochs(nnUNetTrainer):
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 200
-
+        self.save_every = 10
 
 class nnUNetTrainer_225epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 225
-
+        self.save_every = 10
 
 class nnUNetTrainer_250epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 250
-
+        self.save_every = 10
 
 class nnUNetTrainer_275epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 275
-
+        self.save_every = 10
 
 class nnUNetTrainer_300epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 300
+        self.save_every = 10
 
+class nnUNetTrainer_300epochs_160patch(nnUNetTrainer):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 300
+        self.save_every = 10
+
+class nnUNetTrainer_300epochs_192patch(nnUNetTrainer):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 300
+        self.save_every = 10
 
 class nnUNetTrainer_350epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 350
-
+        self.save_every = 10
 
 class nnUNetTrainer_400epochs(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 400
+        self.save_every = 10
 
 
 class nnUNetTrainer_450epochs(nnUNetTrainer):
@@ -123,6 +138,7 @@ class nnUNetTrainer_450epochs(nnUNetTrainer):
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 450
+        self.save_every = 10
 
 
 class nnUNetTrainer_500epochs(nnUNetTrainer):
