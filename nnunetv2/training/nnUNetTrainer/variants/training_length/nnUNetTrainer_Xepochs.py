@@ -104,6 +104,13 @@ class nnUNetTrainer_300epochs(nnUNetTrainer):
         self.num_epochs = 300
         self.save_every = 10
 
+class nnUNetTrainer_300epochs_128patch(nnUNetTrainer):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 300
+        self.save_every = 10
+
 class nnUNetTrainer_300epochs_160patch(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
                  device: torch.device = torch.device('cuda')):
