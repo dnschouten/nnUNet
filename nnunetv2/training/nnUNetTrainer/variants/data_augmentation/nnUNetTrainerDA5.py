@@ -932,6 +932,22 @@ class nnUNetTrainerDA5_500epochs(nnUNetTrainerDA5Segord0):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 500
         self.save_every = 5
+
+
+class nnUNetTrainerDA5_600epochs(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 600
+        self.save_every = 5
+
+        
+class nnUNetTrainerDA5_800epochs(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 800
+        self.save_every = 5
         
         
 class nnUNetTrainerDA5_1000epochs(nnUNetTrainerDA5Segord0):
