@@ -925,6 +925,15 @@ class nnUNetTrainerDA5_200epochs(nnUNetTrainerDA5Segord0):
         self.num_epochs = 200
         self.save_every = 5
         
+
+class nnUNetTrainerDA5_200epochs_finetune(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 200
+        self.save_every = 5
+        self.initial_lr = 0.001
+        
         
 class nnUNetTrainerDA5_300epochs(nnUNetTrainerDA5Segord0):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
@@ -933,6 +942,14 @@ class nnUNetTrainerDA5_300epochs(nnUNetTrainerDA5Segord0):
         self.num_epochs = 300
         self.save_every = 5
 
+
+class nnUNetTrainerDA5_300epochs_finetune(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 300
+        self.save_every = 5
+        self.initial_lr = 0.001
 
 class nnUNetTrainerDA5_400epochs(nnUNetTrainerDA5Segord0):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
@@ -948,6 +965,15 @@ class nnUNetTrainerDA5_500epochs(nnUNetTrainerDA5Segord0):
         super().__init__(plans, configuration, fold, dataset_json, device)
         self.num_epochs = 500
         self.save_every = 5
+
+
+class nnUNetTrainerDA5_500epochs_finetune(nnUNetTrainerDA5Segord0):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, device)
+        self.num_epochs = 500
+        self.save_every = 5
+        self.initial_lr = 0.001
 
 
 class nnUNetTrainerDA5_600epochs(nnUNetTrainerDA5Segord0):
